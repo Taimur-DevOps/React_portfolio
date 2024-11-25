@@ -3,7 +3,7 @@ import { Section } from '@/components/ui/section';
 import { siteConfig } from '@/config/site';
 
 export function About() {
-  const { description, skills } = siteConfig;
+  const {  skills } = siteConfig;
 
   return (
     <Section id="about">
@@ -13,7 +13,7 @@ export function About() {
           {/* Description */}
           <div>
             <p className="text-lg mb-6">I am a dedicated and enthusiastic developer with a strong passion for creating modern web applications. My expertise spans both frontend and backend technologies, allowing me to build complete, seamless digital solutions. With a focus on delivering high-quality user experiences, I aim to solve real-world problems through technology. Whether it's designing user-friendly interfaces or developing robust backend systems, I bring a well-rounded approach to every project. My goal is to continuously improve my skills and create meaningful, impactful web applications that make a difference for users.</p>
-            <div className="grid grid-cols-2 gap-4">
+            {/* <div className="grid grid-cols-2 gap-4">
               {skills.map((skill) => (
                 <div key={skill.name} className="space-y-2 flex items-center">
                   <skill.icon className="w-6 h-6 text-blue-500 mr-3" aria-hidden="true" />
@@ -23,7 +23,7 @@ export function About() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Placeholder Image */}
