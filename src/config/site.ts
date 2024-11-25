@@ -6,8 +6,8 @@ import {
 export const siteConfig = {
   name: "Taimur Ahmad",
   title: "MERN Stack Developer | Code. Build. Scale.",
-  email: "your.email@example.com",
-  linkedin: "https://linkedin.com",
+  email: "taimur.ahmad2016@gmail.com",
+  linkedin: "https://www.linkedin.com/in/taimur-ahmad-9a4912225/",
   github: "https://github.com",
   description: "I'm a passionate developer with expertise in building modern web applications. With a strong foundation in both frontend and backend technologies, I create seamless digital experiences that solve real-world problems.",
   skills: [
