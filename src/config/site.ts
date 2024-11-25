@@ -1,26 +1,41 @@
 import { 
   Code2, FileCode, File, Box, Palette, 
-  LayoutGrid, Braces, CircleEqual, Database, Library 
+  LayoutGrid, Braces, CircleEqual, Database, Library ,Server,Network,FileText,Wifi, Shield , TestTube  ,  Camera ,Paperclip,Cloud
 } from 'lucide-react';
 
 export const siteConfig = {
   name: "Taimur Ahmad",
-  title: "React js | UI/UX Enthusiast | Problem Solver",
+  title: "MERN Stack Developer | Code. Build. Scale.",
   email: "your.email@example.com",
   linkedin: "https://linkedin.com",
   github: "https://github.com",
   description: "I'm a passionate developer with expertise in building modern web applications. With a strong foundation in both frontend and backend technologies, I create seamless digital experiences that solve real-world problems.",
   skills: [
     { name: "HTML", icon: Code2, level: 90 },
-    { name: "CSS", icon: Palette, level: 85 },
-    { name: "JavaScript", icon: FileCode, level: 88 },
-    { name: "React.js", icon: CircleEqual, level: 85 },
-    { name: "Redux", icon: Database, level: 80 },
-    { name: "TypeScript", icon: Braces, level: 82 },
-    { name: "Next.js", icon: Box, level: 78 },
-    { name: "Bootstrap", icon: Library, level: 85 },
+    { name: "CSS", icon: Palette, level: 95 },
+    { name: "Bootstrap", icon: Library, level: 90 },
     { name: "Tailwind CSS", icon: Palette, level: 90 },
-    { name: "Material-UI", icon: LayoutGrid, level: 83 }
+    { name: "Material-UI", icon: LayoutGrid, level: 80 },
+    { name: "JavaScript", icon: FileCode, level: 85 },
+    { name: "React.js", icon: CircleEqual, level: 90 },
+    { name: "React Query", icon: Database, level: 70 } ,
+    { name: "Redux", icon: Database, level: 70 },
+    { name: "TypeScript", icon: Braces, level: 70 },
+    { name: "Next.js", icon: Box, level: 80 },
+    { name: "Node.js", icon: Server, level: 75 },         // Add Node.js
+    { name: "Express.js", icon: Network, level: 80 },      // Add Express.js
+    { name: "MongoDB", icon: Database, level: 70 },        // Add MongoDB
+    { name: "GraphQL", icon: FileText, level: 70 },        // Add GraphQL
+    { name: "WebSockets", icon: Wifi, level: 65 },         // Add WebSockets
+    { name: "JWT", icon: Shield, level: 75 },              // Add JWT Authentication
+    { name: "Vercel", icon: Cloud, level: 75 },             // Add Heroku (Deployment)             // Add AWS (Cloud Services)
+    { name: "OAuth", icon: Shield, level: 70 },              // Add OAuth Authentication
+    { name: "RESTful API", icon: Server, level: 80 },       // Add RESTful API
+    { name: "Mocha", icon: TestTube, level: 65 },           // Add Mocha (Testing Framework)
+    { name: "Jest", icon: Camera, level: 70 },              // Add Jest (Testing Framework)
+    { name: "Mongoose", icon: Database, level: 75 },        // Add Mongoose (ODM for MongoDB)
+    { name: "Firebase", icon: Cloud, level: 70 },           // Add Firebase (Real-time Database)     // Add Redis (In-memory Database)
+    { name: "Postman", icon: Paperclip, level: 80 },     
   ],
   projects: [
     {
