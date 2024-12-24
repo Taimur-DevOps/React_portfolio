@@ -31,8 +31,6 @@ export const siteConfig = {
     { name: "Vercel", icon: Cloud, level: 75 },             // Add Heroku (Deployment)             // Add AWS (Cloud Services)
     { name: "OAuth", icon: Shield, level: 70 },              // Add OAuth Authentication
     { name: "RESTful API", icon: Server, level: 80 },       // Add RESTful API
-    { name: "Mocha", icon: TestTube, level: 65 },           // Add Mocha (Testing Framework)
-    { name: "Jest", icon: Camera, level: 70 },              // Add Jest (Testing Framework)
     { name: "Mongoose", icon: Database, level: 75 },        // Add Mongoose (ODM for MongoDB)
     { name: "Firebase", icon: Cloud, level: 70 },           // Add Firebase (Real-time Database)     // Add Redis (In-memory Database)
     { name: "Postman", icon: Paperclip, level: 80 },     

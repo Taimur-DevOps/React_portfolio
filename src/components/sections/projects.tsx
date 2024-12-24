@@ -1,10 +1,7 @@
-// src/components/sections/projects.tsx
 import React, { useState } from 'react';
-import { Github, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Section } from '@/components/ui/section';
 import { siteConfig } from '@/config/site';
-import { Modal } from '../ui/modal'; // import your modal component
 
 export function Projects() {
   const [selectedProject, setSelectedProject] = useState<null | typeof siteConfig.projects[0]>(null);
@@ -30,7 +27,7 @@ export function Projects() {
               initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="group relative bg-dark-primary rounded-xl overflow-hidden"
+              className="group relative bg-dark-primary rounded-xl overflow-hidden cursor-pointer"
               onClick={() => handleOpenModal(item)} // Open modal on card click
             >
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-dark-primary/90 z-10" />
@@ -51,25 +48,7 @@ export function Projects() {
                       {tech}
                     </span>
                   ))}
-                </div>
-                <div className="flex space-x-4">
-                  <a
-                    href={item.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-neon-blue transition-colors"
-                  >
-                    <Github className="w-6 h-6" />
-                  </a>
-                  <a
-                    href={item.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white hover:text-neon-blue transition-colors"
-                  >
-                    <ExternalLink className="w-6 h-6" />
-                  </a>
-                </div>
+                </div>          
               </div>
             </motion.div>
           ))}
@@ -78,11 +57,26 @@ export function Projects() {
 
       {/* Modal component */}
       {selectedProject && (
-        <Modal
-          item={selectedProject}
-          isOpen={!!selectedProject}
-          onClose={handleCloseModal}
-        />
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+          <div className="bg-white p-6 rounded-lg shadow-lg h-full w-full relative">
+            <button
+              onClick={handleCloseModal}
+              className="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded"
+            >
+              Close
+            </button>
+            <img src={selectedProject.image} alt={selectedProject.title} className="w-full h-64 object-cover rounded-lg mb-4" />
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">{selectedProject.title}</h3>
+            <p className="text-gray-600 mb-4">{selectedProject.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {selectedProject.tech.map((tech, i) => (
+                <span key={i} className="px-3 py-1 text-sm bg-blue-100 text-blue-600 rounded-full">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
       )}
     </Section>
   );
